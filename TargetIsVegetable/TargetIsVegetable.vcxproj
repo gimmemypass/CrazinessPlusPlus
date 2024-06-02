@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{abb13858-e65e-4ea7-a87d-5d2e2ddd78d4}</ProjectGuid>
+    <RootNamespace>TargetIsVegetable</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\gimmemypass\Documents\Projects\TargetIsVegetable\TargetIsVegetable\libs\sfml\include;C:\Users\gimmemypass\Documents\Projects\TargetIsVegetable\TargetIsVegetable\libs\entt;C:\Users\gimmemypass\Documents\Projects\TargetIsVegetable\TargetIsVegetable\libs\imgui</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\gimmemypass\Documents\Projects\TargetIsVegetable\TargetIsVegetable\libs\sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies);opengl32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\gimmemypass\Documents\Projects\TargetIsVegetable\TargetIsVegetable\libs\sfml\include;C:\Users\gimmemypass\Documents\Projects\TargetIsVegetable\TargetIsVegetable\libs\entt;C:\Users\gimmemypass\Documents\Projects\TargetIsVegetable\TargetIsVegetable\libs\imgui</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\gimmemypass\Documents\Projects\TargetIsVegetable\TargetIsVegetable\libs\sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies);opengl32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\States\GameModeState.cpp" />
+    <ClCompile Include="libs\imgui\imgui-SFML.cpp" />
+    <ClCompile Include="libs\imgui\imgui.cpp" />
+    <ClCompile Include="libs\imgui\imgui_draw.cpp" />
+    <ClCompile Include="libs\imgui\imgui_tables.cpp" />
+    <ClCompile Include="libs\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\Profiler.cpp" />
+    <ClCompile Include="src\States\EditorState.cpp" />
+    <ClCompile Include="src\Common\BaseSystem.cpp" />
+    <ClCompile Include="src\Components\SpriteRendererComponent.h" />
+    <ClCompile Include="src\Systems\SpriteRendererSystem.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Common\BaseState.cpp" />
+    <ClCompile Include="src\Common\StatesManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\States\GameModeState.h" />
+    <ClInclude Include="libs\entt\config\config.h" />
+    <ClInclude Include="libs\entt\config\macro.h" />
+    <ClInclude Include="libs\entt\config\version.h" />
+    <ClInclude Include="libs\entt\container\dense_map.hpp" />
+    <ClInclude Include="libs\entt\container\dense_set.hpp" />
+    <ClInclude Include="libs\entt\container\fwd.hpp" />
+    <ClInclude Include="libs\entt\core\algorithm.hpp" />
+    <ClInclude Include="libs\entt\core\any.hpp" />
+    <ClInclude Include="libs\entt\core\attribute.h" />
+    <ClInclude Include="libs\entt\core\compressed_pair.hpp" />
+    <ClInclude Include="libs\entt\core\enum.hpp" />
+    <ClInclude Include="libs\entt\core\family.hpp" />
+    <ClInclude Include="libs\entt\core\fwd.hpp" />
+    <ClInclude Include="libs\entt\core\hashed_string.hpp" />
+    <ClInclude Include="libs\entt\core\ident.hpp" />
+    <ClInclude Include="libs\entt\core\iterator.hpp" />
+    <ClInclude Include="libs\entt\core\memory.hpp" />
+    <ClInclude Include="libs\entt\core\monostate.hpp" />
+    <ClInclude Include="libs\entt\core\tuple.hpp" />
+    <ClInclude Include="libs\entt\core\type_info.hpp" />
+    <ClInclude Include="libs\entt\core\type_traits.hpp" />
+    <ClInclude Include="libs\entt\core\utility.hpp" />
+    <ClInclude Include="libs\entt\entity\component.hpp" />
+    <ClInclude Include="libs\entt\entity\entity.hpp" />
+    <ClInclude Include="libs\entt\entity\fwd.hpp" />
+    <ClInclude Include="libs\entt\entity\group.hpp" />
+    <ClInclude Include="libs\entt\entity\handle.hpp" />
+    <ClInclude Include="libs\entt\entity\helper.hpp" />
+    <ClInclude Include="libs\entt\entity\mixin.hpp" />
+    <ClInclude Include="libs\entt\entity\observer.hpp" />
+    <ClInclude Include="libs\entt\entity\organizer.hpp" />
+    <ClInclude Include="libs\entt\entity\registry.hpp" />
+    <ClInclude Include="libs\entt\entity\runtime_view.hpp" />
+    <ClInclude Include="libs\entt\entity\snapshot.hpp" />
+    <ClInclude Include="libs\entt\entity\sparse_set.hpp" />
+    <ClInclude Include="libs\entt\entity\storage.hpp" />
+    <ClInclude Include="libs\entt\entity\table.hpp" />
+    <ClInclude Include="libs\entt\entity\view.hpp" />
+    <ClInclude Include="libs\entt\entt.hpp" />
+    <ClInclude Include="libs\entt\fwd.hpp" />
+    <ClInclude Include="libs\entt\graph\adjacency_matrix.hpp" />
+    <ClInclude Include="libs\entt\graph\dot.hpp" />
+    <ClInclude Include="libs\entt\graph\flow.hpp" />
+    <ClInclude Include="libs\entt\graph\fwd.hpp" />
+    <ClInclude Include="libs\entt\locator\locator.hpp" />
+    <ClInclude Include="libs\entt\meta\adl_pointer.hpp" />
+    <ClInclude Include="libs\entt\meta\container.hpp" />
+    <ClInclude Include="libs\entt\meta\context.hpp" />
+    <ClInclude Include="libs\entt\meta\factory.hpp" />
+    <ClInclude Include="libs\entt\meta\fwd.hpp" />
+    <ClInclude Include="libs\entt\meta\meta.hpp" />
+    <ClInclude Include="libs\entt\meta\node.hpp" />
+    <ClInclude Include="libs\entt\meta\pointer.hpp" />
+    <ClInclude Include="libs\entt\meta\policy.hpp" />
+    <ClInclude Include="libs\entt\meta\range.hpp" />
+    <ClInclude Include="libs\entt\meta\resolve.hpp" />
+    <ClInclude Include="libs\entt\meta\template.hpp" />
+    <ClInclude Include="libs\entt\meta\type_traits.hpp" />
+    <ClInclude Include="libs\entt\meta\utility.hpp" />
+    <ClInclude Include="libs\entt\platform\android-ndk-r17.hpp" />
+    <ClInclude Include="libs\entt\poly\fwd.hpp" />
+    <ClInclude Include="libs\entt\poly\poly.hpp" />
+    <ClInclude Include="libs\entt\process\fwd.hpp" />
+    <ClInclude Include="libs\entt\process\process.hpp" />
+    <ClInclude Include="libs\entt\process\scheduler.hpp" />
+    <ClInclude Include="libs\entt\resource\cache.hpp" />
+    <ClInclude Include="libs\entt\resource\fwd.hpp" />
+    <ClInclude Include="libs\entt\resource\loader.hpp" />
+    <ClInclude Include="libs\entt\resource\resource.hpp" />
+    <ClInclude Include="libs\entt\signal\delegate.hpp" />
+    <ClInclude Include="libs\entt\signal\dispatcher.hpp" />
+    <ClInclude Include="libs\entt\signal\emitter.hpp" />
+    <ClInclude Include="libs\entt\signal\fwd.hpp" />
+    <ClInclude Include="libs\entt\signal\sigh.hpp" />
+    <ClInclude Include="libs\imgui\imconfig-SFML.h" />
+    <ClInclude Include="libs\imgui\imconfig.h" />
+    <ClInclude Include="libs\imgui\imgui-SFML.h" />
+    <ClInclude Include="libs\imgui\imgui-SFML_export.h" />
+    <ClInclude Include="libs\imgui\imgui.h" />
+    <ClInclude Include="libs\imgui\imgui_internal.h" />
+    <ClInclude Include="libs\imgui\imstb_rectpack.h" />
+    <ClInclude Include="libs\imgui\imstb_textedit.h" />
+    <ClInclude Include="libs\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\Profiler.h" />
+    <ClInclude Include="src\States\EditorState.h" />
+    <ClInclude Include="src\Common\BaseSystem.h" />
+    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\Common\BaseState.h" />
+    <ClInclude Include="src\SystemsHelper.h" />
+    <ClInclude Include="src\Systems\SpriteRendererSystem.h" />
+    <ClInclude Include="src\Common\StatesManager.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
