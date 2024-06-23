@@ -1,6 +1,6 @@
 #pragma once
 
-class NonMoveable
+struct NonMoveable
 {
     NonMoveable() = default;
     NonMoveable& operator=(NonMoveable&&) = delete;

@@ -11,10 +11,10 @@
 class Game
 {
 private :
-	sf::RenderWindow _window;
-	entt::registry _registry;
-	StatesManager _statesManager;
-	Profiler _profiler;
+	sf::RenderWindow window;
+	entt::registry registry;
+	StatesManager statesManager;
+	Profiler profiler;
 	void Update(float dt);
 public :
 	Game();

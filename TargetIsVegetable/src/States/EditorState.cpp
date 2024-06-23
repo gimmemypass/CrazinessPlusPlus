@@ -26,5 +26,5 @@ size_t EditorState::NextState()
 
 void EditorState::AddSystems()
 {
-	SystemsHelper::AddDefaultSystems(_systems, _reg);
+	SystemsHelper::AddDefaultSystems(systems, reg);
 }

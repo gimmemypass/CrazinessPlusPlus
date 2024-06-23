@@ -1,42 +1,46 @@
 #include "Game.h"
 #include <iostream>
+#include "Components.h"
+#include <SFML/Graphics.hpp>
 
-Game::Game() : _registry(),
-               _statesManager(_registry),
-               _window(sf::VideoMode(512, 512), "TargetIsVegetable"),
-			   _profiler()
+Game::Game() : registry(),
+               statesManager(registry),
+               window(sf::VideoMode(512, 512), "TargetIsVegetable"),
+			   profiler()
 {
-
 }
 void Game::Initialize()
 {
-	
 }
 
 void Game::Run()
 {
     std::chrono::steady_clock delta_clock = {};
-    ImGui::SFML::Init(_window);
+    ImGui::SFML::Init(window);
     sf::Clock deltaClock;
-    while (_window.isOpen())
+    while (window.isOpen())
     {
         sf::Time dt = deltaClock.restart();
 
-        Update(dt.asSeconds());
-
         sf::Event event;
-        while (_window.pollEvent(event))
+        while (window.pollEvent(event))
         {
             ImGui::SFML::ProcessEvent(event);
             if (event.type == sf::Event::Closed)
                 Finish();
         }
-        ImGui::SFML::Update(_window, dt);
-        _profiler.Update(dt.asSeconds());
+        ImGui::SFML::Update(window, dt);
+        profiler.Update(dt.asSeconds());
 
-        _window.clear();
-        ImGui::SFML::Render(_window);
-        _window.display();
+        window.clear();
+        ImGui::SFML::Render(window);
+        Update(dt.asSeconds());
+        for (auto& ent : registry.view<SpriteRendererComponent>())
+        {
+            auto& component = registry.get<SpriteRendererComponent>(ent);
+			window.draw(component.sprite);
+        }
+        window.display();
     }
 
     ImGui::SFML::Shutdown();
@@ -44,11 +48,11 @@ void Game::Run()
 
 void Game::Update(float dt)
 {
-    _statesManager.Update(dt);
+    statesManager.Update(dt);
 }
 
 void Game::Finish()
 {
-    _window.close();
+    window.close();
 
 }

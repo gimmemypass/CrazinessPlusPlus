@@ -7,7 +7,7 @@
 class BaseState
 {
 protected:
-    entt::registry& _reg;
+    entt::registry& reg;
 public:
     BaseState(entt::registry& reg);
 
@@ -31,7 +31,7 @@ public:
 
 
 protected: 
-    std::vector<std::unique_ptr<BaseSystem>> _systems;
+    std::vector<std::unique_ptr<BaseSystem>> systems;
     virtual void AddSystems() = 0;
     void UpdateSystems(float dt);
 };

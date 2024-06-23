@@ -4,9 +4,9 @@
 class BaseSystem
 {
 protected:
-	entt::registry& _reg;
+	entt::registry& reg;
 public :
-	BaseSystem(entt::registry& reg) : _reg(reg) {};
+	BaseSystem(entt::registry& reg) : reg(reg) {};
 	BaseSystem(const BaseSystem& sys) = default;
 	BaseSystem(BaseSystem&& sys) = default;
 	BaseSystem& operator=(BaseSystem&& sys) = delete;

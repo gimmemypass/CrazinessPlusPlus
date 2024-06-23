@@ -1,6 +1,6 @@
 #pragma once
 
-class NonCopyable
+struct NonCopyable
 {
 	NonCopyable() = default;
 	NonCopyable(const NonCopyable&) = delete;

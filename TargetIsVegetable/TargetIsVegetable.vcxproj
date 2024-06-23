@@ -143,7 +143,7 @@
     <ClCompile Include="src\Profiler.cpp" />
     <ClCompile Include="src\States\EditorState.cpp" />
     <ClCompile Include="src\Common\BaseSystem.cpp" />
-    <ClCompile Include="src\Components\SpriteRendererComponent.h" />
+    <ClCompile Include="src\Systems\InitBoidsSystem.cpp" />
     <ClCompile Include="src\Systems\SpriteRendererSystem.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -151,7 +151,9 @@
     <ClCompile Include="src\Common\StatesManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Components\TransformComponent.h" />
+    <ClInclude Include="src\Common\ResourceManager\ResourceManager.h" />
+    <ClInclude Include="src\Common\ResourceManager\RecourceHolder.h" />
+    <ClInclude Include="src\Components.h" />
     <ClInclude Include="src\States\GameModeState.h" />
     <ClInclude Include="libs\entt\config\config.h" />
     <ClInclude Include="libs\entt\config\macro.h" />
@@ -242,8 +244,11 @@
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\Common\BaseState.h" />
     <ClInclude Include="src\SystemsHelper.h" />
+    <ClInclude Include="src\Systems\InitBoidsSystem.h" />
     <ClInclude Include="src\Systems\SpriteRendererSystem.h" />
     <ClInclude Include="src\Common\StatesManager.h" />
+    <ClInclude Include="src\Utils\NonCopyable.h" />
+    <ClInclude Include="src\Utils\NonMoveable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

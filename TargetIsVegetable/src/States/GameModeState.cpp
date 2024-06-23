@@ -1,9 +1,11 @@
 #include "GameModeState.h"
 #include "../SystemsHelper.h"
+#include "../Systems/InitBoidsSystem.h"
 
 void GameModeState::OnEnter()
 {
-	AddSystems(); 
+	AddSystems();
+	
 }
 
 void GameModeState::OnExit()
@@ -22,5 +24,6 @@ size_t GameModeState::NextState()
 
 void GameModeState::AddSystems()
 {
-	SystemsHelper::AddDefaultSystems(_systems, _reg);
+	SystemsHelper::AddDefaultSystems(systems, reg);
+	systems.push_back(std::make_unique<InitBoidsSystem>(reg));
 }

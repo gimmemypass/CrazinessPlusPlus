@@ -5,9 +5,9 @@
 class StatesManager
 {
 private:
-	entt::registry& _reg;
-	size_t _currentState;
-	std::unordered_map<size_t, std::unique_ptr<BaseState>> _states;
+	entt::registry& reg;
+	size_t currentState;
+	std::unordered_map<size_t, std::unique_ptr<BaseState>> states;
 public:
 	StatesManager(entt::registry& reg);
 	void Update(float dt);
