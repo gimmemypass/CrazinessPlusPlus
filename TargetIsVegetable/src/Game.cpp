@@ -5,7 +5,7 @@
 
 Game::Game() : registry(),
                statesManager(registry),
-               window(sf::VideoMode(512, 512), "TargetIsVegetable"),
+               window(sf::VideoMode(1024, 1024), "TargetIsVegetable"),
 			   profiler()
 {
 }
@@ -18,6 +18,9 @@ void Game::Run()
     std::chrono::steady_clock delta_clock = {};
     ImGui::SFML::Init(window);
     sf::Clock deltaClock;
+	sf::View view = sf::View(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+	window.setView(view);
+
     while (window.isOpen())
     {
         sf::Time dt = deltaClock.restart();
@@ -28,6 +31,12 @@ void Game::Run()
             ImGui::SFML::ProcessEvent(event);
             if (event.type == sf::Event::Closed)
                 Finish();
+            if (event.type == sf::Event::Resized)
+            {
+                sf::View view = sf::View(sf::FloatRect(event.size.width/-2.f, event.size.height/-2.f, event.size.width, event.size.height));
+                window.setView(view);
+            }
+
         }
         ImGui::SFML::Update(window, dt);
         profiler.Update(dt.asSeconds());

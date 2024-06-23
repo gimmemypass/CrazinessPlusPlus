@@ -141,7 +141,6 @@
     <ClCompile Include="libs\imgui\imgui_tables.cpp" />
     <ClCompile Include="libs\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\Profiler.cpp" />
-    <ClCompile Include="src\States\EditorState.cpp" />
     <ClCompile Include="src\Common\BaseSystem.cpp" />
     <ClCompile Include="src\Systems\InitBoidsSystem.cpp" />
     <ClCompile Include="src\Systems\SpriteRendererSystem.cpp" />
@@ -239,7 +238,6 @@
     <ClInclude Include="libs\imgui\imstb_textedit.h" />
     <ClInclude Include="libs\imgui\imstb_truetype.h" />
     <ClInclude Include="src\Profiler.h" />
-    <ClInclude Include="src\States\EditorState.h" />
     <ClInclude Include="src\Common\BaseSystem.h" />
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\Common\BaseState.h" />
