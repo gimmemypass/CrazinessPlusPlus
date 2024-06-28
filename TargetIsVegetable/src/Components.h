@@ -14,4 +14,9 @@ struct TransformComponent
 	sf::Vector2f scale = sf::Vector2f(1,1);
 };
 
+struct BoidTagComponent
+{
+
+};
+
 

@@ -143,6 +143,7 @@
     <ClCompile Include="src\Profiler.cpp" />
     <ClCompile Include="src\Common\BaseSystem.cpp" />
     <ClCompile Include="src\Systems\InitBoidsSystem.cpp" />
+    <ClCompile Include="src\Systems\MoveBoidsSystem.cpp" />
     <ClCompile Include="src\Systems\SpriteRendererSystem.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -243,6 +244,7 @@
     <ClInclude Include="src\Common\BaseState.h" />
     <ClInclude Include="src\SystemsHelper.h" />
     <ClInclude Include="src\Systems\InitBoidsSystem.h" />
+    <ClInclude Include="src\Systems\MoveBoidsSystem.h" />
     <ClInclude Include="src\Systems\SpriteRendererSystem.h" />
     <ClInclude Include="src\Common\StatesManager.h" />
     <ClInclude Include="src\Utils\NonCopyable.h" />
