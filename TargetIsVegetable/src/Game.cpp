@@ -18,7 +18,7 @@ void Game::Run()
     std::chrono::steady_clock delta_clock = {};
     ImGui::SFML::Init(window);
     sf::Clock deltaClock;
-	sf::View view = sf::View(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+	sf::View view = sf::View(sf::FloatRect(window.getSize().x / -2.f, window.getSize().y / -2.f, window.getSize().x, window.getSize().y));
 	window.setView(view);
 
     while (window.isOpen())
