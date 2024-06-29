@@ -3,6 +3,9 @@
 #include "../Systems/InitBoidsSystem.h"
 #include "../Systems/MoveBoidsSystem.h"
 
+GameModeState::GameModeState(entt::registry& reg): BaseState(reg)
+{}
+
 void GameModeState::OnEnter()
 {
 	AddSystems();
@@ -13,7 +16,7 @@ void GameModeState::OnExit()
 {
 }
 
-void GameModeState::Update(float dt)
+void GameModeState::Update(const float dt)
 {
 	UpdateSystems(dt);
 }

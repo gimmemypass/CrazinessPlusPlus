@@ -17,7 +17,7 @@ void SpriteRendererSystem::Update(float dt)
 	{
 		auto& spriteRendererComponent = view.get<SpriteRendererComponent>(ent);
 		auto& transformComponent = view.get<TransformComponent>(ent);
-		spriteRendererComponent.sprite.setPosition(transformComponent.position);
+		spriteRendererComponent.sprite.setPosition(transformComponent.position.x, transformComponent.position.y);
 		spriteRendererComponent.sprite.setRotation(transformComponent.rotation);
 		spriteRendererComponent.sprite.setScale(transformComponent.scale);
 	}

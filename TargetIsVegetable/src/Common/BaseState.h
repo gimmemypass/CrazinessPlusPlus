@@ -9,7 +9,7 @@ class BaseState
 protected:
     entt::registry& reg;
 public:
-    BaseState(entt::registry& reg);
+    explicit BaseState(entt::registry& reg);
 
     BaseState(const BaseState&) = delete;
 

@@ -19,4 +19,9 @@ struct BoidTagComponent
 
 };
 
+struct MovementComponent
+{
+	float speed;
+};
+
 

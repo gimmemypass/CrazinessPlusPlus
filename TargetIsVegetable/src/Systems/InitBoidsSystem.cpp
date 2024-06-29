@@ -7,6 +7,8 @@ InitBoidsSystem::InitBoidsSystem(entt::registry& reg) : BaseSystem(reg)
     auto ent = reg.create();
     reg.emplace<TransformComponent>(ent);
     reg.emplace<SpriteRendererComponent>(ent, LoadBoidSprite());
+    reg.emplace<BoidTagComponent>(ent);
+    reg.emplace<MovementComponent>(ent, 100.f);
     reg.get<TransformComponent>(ent).scale = sf::Vector2f(1, 1) * 0.1f;
 }
 

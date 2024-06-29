@@ -249,6 +249,7 @@
     <ClInclude Include="src\Common\StatesManager.h" />
     <ClInclude Include="src\Utils\NonCopyable.h" />
     <ClInclude Include="src\Utils\NonMoveable.h" />
+    <ClInclude Include="src\Utils\SFMLMath.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

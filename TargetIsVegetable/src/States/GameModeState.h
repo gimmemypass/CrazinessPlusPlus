@@ -1,10 +1,10 @@
 #pragma once
 #include "../Common/BaseState.h"
 
-class GameModeState : public BaseState
+class GameModeState final : public BaseState
 {
 public:
-	GameModeState(entt::registry& reg) : BaseState(reg) {};
+	explicit GameModeState(entt::registry& reg);
 	void OnEnter() override;
 	void OnExit() override;
 	void Update(float dt) override;
