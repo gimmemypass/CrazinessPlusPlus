@@ -1,21 +1,23 @@
 #include "Profiler.h"
+#include "imgui.h"
+#include <format>
 
-Profiler::Profiler() : _fps(0), _fpsTime(0), _fpsCounter(0)
+Profiler::Profiler() : fps(0), fpsCounter(0), fpsTime(0)
 { 
 
 }
 void Profiler::Update(float dt)
 {
-	_fpsCounter++;
-	_fpsTime += dt;
-	if (_fpsTime > 1)
+	fpsCounter++;
+	fpsTime += dt;
+	if (fpsTime > 1)
 	{
-		_fps = _fpsCounter;
-		_fpsTime = 0;
-		_fpsCounter = 0;
+		fps = fpsCounter;
+		fpsTime = 0;
+		fpsCounter = 0;
 	}
 
-	ImGui::Begin("Profiler", (bool*)0, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_NoResize);
-	ImGui::Text(std::format("FPS : {}", _fps).c_str());
+	ImGui::Begin("Profiler", nullptr, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_NoResize);
+	ImGui::Text(std::format("FPS : {}", fps).c_str());
 	ImGui::End();
 }

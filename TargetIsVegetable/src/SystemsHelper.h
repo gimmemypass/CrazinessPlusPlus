@@ -1,6 +1,5 @@
 #pragma once
 #include "Systems/SpriteRendererSystem.h"
-#include "Systems/InitBoidsSystem.h"
 #include <vector>
 #include <entt.hpp>
 

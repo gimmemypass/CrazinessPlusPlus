@@ -2,10 +2,10 @@
 #include <entt.hpp>
 #include "../Common/BaseSystem.h"
 
-class SpriteRendererSystem : public BaseSystem
+class SpriteRendererSystem final : public BaseSystem
 {
 public :
-	SpriteRendererSystem(entt::registry& reg);
+	explicit SpriteRendererSystem(entt::registry& reg);
 	~SpriteRendererSystem() noexcept override;
 	void Update(float dt) override;
 };

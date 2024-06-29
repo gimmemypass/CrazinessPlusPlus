@@ -1,12 +1,11 @@
 #pragma once
 
-#include <entt.hpp>
 #include "../Common/BaseSystem.h"
 
-class MoveBoidsSystem : public BaseSystem
+class MoveBoidsSystem final : public BaseSystem
 {
 public :
-	MoveBoidsSystem(entt::registry& reg);
+	explicit MoveBoidsSystem(entt::registry& reg);
 	~MoveBoidsSystem() noexcept override;
 	void Update(float dt) override;
 };

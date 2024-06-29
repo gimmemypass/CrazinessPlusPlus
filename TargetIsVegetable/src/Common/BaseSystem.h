@@ -6,7 +6,7 @@ class BaseSystem
 protected:
 	entt::registry& reg;
 public :
-	BaseSystem(entt::registry& reg) : reg(reg) {};
+	explicit BaseSystem(entt::registry& reg) : reg(reg) {}
 	BaseSystem(const BaseSystem& sys) = default;
 	BaseSystem(BaseSystem&& sys) = default;
 	BaseSystem& operator=(BaseSystem&& sys) = delete;

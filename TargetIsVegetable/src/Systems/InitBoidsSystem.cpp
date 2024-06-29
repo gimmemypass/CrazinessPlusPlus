@@ -1,4 +1,6 @@
 #include "InitBoidsSystem.h"
+#include "../Components.h"
+#include "../Common/ResourceManager/RecourceHolder.h"
 
 InitBoidsSystem::InitBoidsSystem(entt::registry& reg) : BaseSystem(reg)
 {

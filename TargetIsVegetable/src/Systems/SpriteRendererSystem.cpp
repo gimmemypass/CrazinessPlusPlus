@@ -1,7 +1,6 @@
 #include "../Common/BaseSystem.h"
 #include "../Components.h";
 #include "SpriteRendererSystem.h"
-#include <iostream>
 #include <entt.hpp>
 
 SpriteRendererSystem::SpriteRendererSystem(entt::registry& reg) : BaseSystem(reg)
@@ -9,9 +8,8 @@ SpriteRendererSystem::SpriteRendererSystem(entt::registry& reg) : BaseSystem(reg
 	
 }
 SpriteRendererSystem::~SpriteRendererSystem()
-{
+= default;
 
-}
 void SpriteRendererSystem::Update(float dt)
 {
 	auto view = reg.view<SpriteRendererComponent, TransformComponent>();

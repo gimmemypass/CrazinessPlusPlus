@@ -10,7 +10,6 @@
 
 class Game
 {
-private :
 	sf::RenderWindow window;
 	entt::registry registry;
 	StatesManager statesManager;

@@ -2,10 +2,9 @@
 #include "Game.h"
 int main()
 {
-    Game game = Game();
+    auto game = Game();
     game.Initialize();
     game.Run();
-
 
     return 0;
 }
