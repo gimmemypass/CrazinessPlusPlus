@@ -3,6 +3,8 @@
 #include "../Utils/SFMLMath.hpp"
 #include <SFML/Window.hpp>
 
+#include "../Services/InputService.h"
+
 MoveBoidsSystem::MoveBoidsSystem(entt::registry& reg) : BaseSystem(reg)
 {
 }
@@ -17,7 +19,7 @@ void MoveBoidsSystem::Update(float dt)
 	if (!sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		return;
 
-	sf::Vector2i mousePosition = sf::Mouse::getPosition();
+	sf::Vector2f mousePosition = InputService::Instance()->GetMouseWorldPosition();
 	auto floatMousePosition = sf::Vector2f(static_cast<float>(mousePosition.x), static_cast<float>(mousePosition.y));
 	auto view = reg.view<BoidTagComponent>();
 	for (auto& ent : view)
@@ -26,6 +28,5 @@ void MoveBoidsSystem::Update(float dt)
 		auto& movementComponent = reg.get<MovementComponent>(ent);
 		auto dir = sf::getNormalized(floatMousePosition - transformComponent.position);
 		transformComponent.position = transformComponent.position + dir * movementComponent.speed * dt;
-		break;
 	}
 }

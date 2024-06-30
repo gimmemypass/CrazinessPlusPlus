@@ -1,6 +1,7 @@
 #include "Game.h"
 #include <iostream>
 #include "Components.h"
+#include "Services/InputService.h"
 #include <SFML/Graphics.hpp>
 
 Game::Game() : window(sf::VideoMode(1024, 1024), "TargetIsVegetable"),
@@ -18,6 +19,7 @@ void Game::Run()
     auto view = sf::View(sf::FloatRect(window.getSize().x / -2.f, window.getSize().y / -2.f, window.getSize().x, window.getSize().y));
 	window.setView(view);
 
+    InputService::Instance()->Initialise(&window); 
     while (window.isOpen())
     {
         sf::Time dt = deltaClock.restart();
@@ -41,6 +43,8 @@ void Game::Run()
         window.clear();
         ImGui::SFML::Render(window);
         Update(dt.asSeconds());
+        
+        //todo move to render systems
         for (auto& ent : registry.view<SpriteRendererComponent>())
         {
             auto& component = registry.get<SpriteRendererComponent>(ent);
