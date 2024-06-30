@@ -12,7 +12,7 @@ SpriteRendererSystem::~SpriteRendererSystem()
 
 void SpriteRendererSystem::Update(float dt)
 {
-	auto view = reg.view<SpriteRendererComponent, TransformComponent>();
+	const auto view = reg.view<SpriteRendererComponent, TransformComponent>();
 	for (auto& ent : view)
 	{
 		auto& spriteRendererComponent = view.get<SpriteRendererComponent>(ent);
