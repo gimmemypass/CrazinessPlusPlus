@@ -13,9 +13,7 @@ InitBoidsSystem::InitBoidsSystem(entt::registry& reg) : BaseSystem(reg)
 }
 
 InitBoidsSystem::~InitBoidsSystem() noexcept
-{
-
-}
+= default;
 
 void InitBoidsSystem::Update(float dt)
 {
@@ -24,6 +22,9 @@ void InitBoidsSystem::Update(float dt)
 
 sf::Sprite InitBoidsSystem::LoadBoidSprite()
 {
-    auto& boidTexture = ResourceHolder::Get().textures.Get("boid");
-    return sf::Sprite(boidTexture);
+    const auto& boidTexture = ResourceHolder::Get().textures.Get("boid");
+    const auto size = boidTexture.getSize();
+    auto sprite = sf::Sprite(boidTexture);
+    sprite.setOrigin(size.x/2.f, size.y/2.f);
+    return sprite;
 }

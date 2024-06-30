@@ -10,5 +10,5 @@ public:
 	~InitBoidsSystem() noexcept override;
 	void Update(float dt) override;
 private:
-    sf::Sprite LoadBoidSprite();
+    static sf::Sprite LoadBoidSprite();
 };
