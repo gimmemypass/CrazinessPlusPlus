@@ -17,7 +17,7 @@ struct TransformComponent
 	
 	sf::Vector2f GetForward() const
 	{
-		auto baseForward = sf::Vector2f(0,1);
+		auto baseForward = sf::Vector2f(0,-1);
 		return rotate(baseForward, rotation);		
 	}
 	sf::Vector2f GetRight() const
@@ -28,7 +28,7 @@ struct TransformComponent
 	
 	void SetForward(const sf::Vector2f to)
 	{
-		const auto rot = signedAngle(sf::Vector2f(0,1), to);
+		const auto rot = signedAngle(sf::Vector2f(0,-1), to);
 		rotation = sf::normalizeAngle(rot);
 	}
 };

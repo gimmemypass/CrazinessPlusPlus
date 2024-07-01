@@ -352,7 +352,7 @@ namespace sf
         const float unsignedAngle = getAngleBetween(from, to);
 
         const float crossZ = from.x * to.y - from.y * to.x;
-        const float sign = std::signbit(crossZ);
+        const float sign = std::signbit(crossZ) == 1 ? -1 : 1;
         return unsignedAngle * sign;
     }
 
