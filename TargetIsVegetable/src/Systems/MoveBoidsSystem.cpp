@@ -23,8 +23,12 @@ void MoveBoidsSystem::Update(float dt)
 	{
 		auto& transformComponent = reg.get<TransformComponent>(ent);
 		const auto& movementComponent = reg.get<MovementComponent>(ent);
-		auto dir = sf::getNormalized(mousePosition - transformComponent.position);
-		transformComponent.position = transformComponent.position + dir * movementComponent.speed * dt;
+		auto vec = mousePosition - transformComponent.position;
+		if(sf::sqrMagnitude(vec) < 100.f)
+			return;
+		auto dir = sf::getNormalized(vec);
+		// transformComponent.position = transformComponent.position + dir * movementComponent.speed * dt;
+		transformComponent.position = sf::lerp(transformComponent.position, mousePosition, 7.f * dt);
 		transformComponent.SetForward(dir);	
 	}
 }

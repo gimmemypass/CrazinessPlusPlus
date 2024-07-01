@@ -21,6 +21,5 @@ void SpriteRendererSystem::Update(float dt)
 		spriteRendererComponent.sprite.setPosition(transformComponent.position.x, transformComponent.position.y);
 		spriteRendererComponent.sprite.setRotation(transformComponent.rotation);
 		spriteRendererComponent.sprite.setScale(transformComponent.scale);
-		std::cout << transformComponent.rotation << std::endl;
 	}
 }

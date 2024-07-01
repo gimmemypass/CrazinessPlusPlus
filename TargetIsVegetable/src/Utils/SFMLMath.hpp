@@ -363,5 +363,14 @@ namespace sf
         }
         return normalizedAngle;
     }
+    
+    template<Vector2D T2>
+    T2 lerp(const T2 from, const T2 to, const float t)
+    {
+        return T2(
+            std::lerp(from.x, to.x, t),
+            std::lerp(from.y, to.y, t)
+            );
+    }
 
 }
